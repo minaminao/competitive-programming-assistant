@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Competitive Programming Assistant",
+    "version": "0.1",
+    "short_name": "CPA",
+    "description": "a extention for competitive programming",
+    "icons": {
+        "128": "icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=*"
+            ],
+            "js": [
+                "description.js"
+            ]
+        },
+        {
+            "matches": [
+                "http://judge.u-aizu.ac.jp/onlinejudge/status.jsp*"
+            ],
+            "js": [
+                "status.js"
+            ]
+        }
+    ]
+}
