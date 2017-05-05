@@ -13,7 +13,7 @@
                 "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=*"
             ],
             "js": [
-                "description.js"
+                "aoj/description.js"
             ]
         },
         {
@@ -21,7 +21,7 @@
                 "http://judge.u-aizu.ac.jp/onlinejudge/status.jsp*"
             ],
             "js": [
-                "status.js"
+                "aoj/status.js"
             ]
         }
     ]
