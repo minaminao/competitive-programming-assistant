@@ -5,7 +5,15 @@
     "short_name": "CPA",
     "description": "a extention for competitive programming",
     "icons": {
-        "128": "icon128.png"
+        "128": "img/icon128.png"
+    },
+    "page_action": {
+        "defalut_title": "..."
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
     },
     "content_scripts": [
         {
@@ -24,5 +32,8 @@
                 "aoj/status.js"
             ]
         }
+    ],
+    "permissions": [
+        "http://judge.u-aizu.ac.jp/"
     ]
 }
