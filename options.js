@@ -1,7 +1,7 @@
 function save_options() {
-    var userid = document.getElementById("userid").value;
     chrome.storage.local.set({
-        userid: userid
+        userid: document.getElementById("userid").value,
+        language: document.getElementById("language").selectedIndex
     }, function () {
         var status = document.getElementById("status");
         status.textContent = "Options saved.";
@@ -13,9 +13,11 @@ function save_options() {
 
 function restore_options() {
     chrome.storage.local.get({
-        userid: ""
+        userid: "",
+        language: 1
     }, function (items) {
         document.getElementById("userid").value = items.userid;
+        document.getElementById("language").selectedIndex = items.language;
     });
 }
 
