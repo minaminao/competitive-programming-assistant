@@ -1,2 +1,1 @@
-# competitive-programming-assistant
-a chrome extension for competitive programming
+# Competitive Programming Assistant
