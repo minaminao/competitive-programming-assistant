@@ -5,7 +5,7 @@
         location.href = location.href + "&lang=jp";
 
     function getProblemId() {
-        var number = location.href.match(/[0-9]{4}/);
+        var number = location.href.match(/[0-9]{4}/)[0];
         return ('000' + number).slice(-4);
     }
 

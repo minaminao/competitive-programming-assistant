@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Competitive Programming Assistant",
-    "version": "0.1",
+    "version": "0.4",
     "short_name": "CPA",
     "description": "a extention for competitive programming",
     "icons": {
@@ -31,11 +31,20 @@
             "js": [
                 "aoj/status.js"
             ]
+        },
+        {
+            "matches": [
+                "http://*.contest.atcoder.jp/tasks/*"
+            ],
+            "js": [
+                "atcoder/ac.js"
+            ]
         }
     ],
     "permissions": [
         "storage",
-        "http://judge.u-aizu.ac.jp/"
+        "http://judge.u-aizu.ac.jp/",
+        "http://*.contest.atcoder.jp/"
     ],
     "options_page": "options.html"
 }
