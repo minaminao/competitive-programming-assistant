@@ -24,7 +24,7 @@
                 for (var i = 0; i < ids.length; i++)
                     if (ids[i].innerHTML == id)
                         accepted = true;
-                chrome.runtime.sendMessage({ accepted: accepted });
+                chrome.runtime.sendMessage({ content: "aoj/description.js", accepted: accepted });
             }
         }
         xhr.send();

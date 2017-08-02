@@ -18,7 +18,7 @@
                 // xhr.status が undefined になる
                 var doc = xhr.responseXML.documentElement;
                 var accepted = doc.getElementsByClassName("label-success").length ? true : false;
-                chrome.runtime.sendMessage({ accepted: accepted });
+                chrome.runtime.sendMessage({ content: "atcoder/ac.js", accepted: accepted });
             }
         }
         xhr.responseType = "document";
