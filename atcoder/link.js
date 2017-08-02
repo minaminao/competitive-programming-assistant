@@ -6,7 +6,7 @@
         userid: ""
     }, function (items) {
         for (var i = 0; i < a.length; i++) {
-            if (a[i].href.indexOf("atcoder.jp")) {
+            if (a[i].href.indexOf("atcoder.jp/tasks") >= 0) {
                 chrome.runtime.sendMessage({ content: "atcoder/link.js", url: a[i].href, userid: items.userid, idx: i },
                     function (response) { });
             }
