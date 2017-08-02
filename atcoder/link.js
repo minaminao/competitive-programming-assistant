@@ -6,8 +6,10 @@
         userid: ""
     }, function (items) {
         for (var i = 0; i < a.length; i++) {
-            chrome.runtime.sendMessage({ content: "atcoder/link.js", url: a[i].href, userid: items.userid, idx: i },
-                function (response) {});
+            if (a[i].href.indexOf("atcoder.jp")) {
+                chrome.runtime.sendMessage({ content: "atcoder/link.js", url: a[i].href, userid: items.userid, idx: i },
+                    function (response) { });
+            }
         }
     });
 
@@ -15,7 +17,7 @@
         if (message.ac) {
             console.log(message.idx);
             console.log(message.ac);
-            a[message.idx].parentElement.style.backgroundColor = '#5cb85c';
+            a[message.idx].style.backgroundColor = '#5cb85c';
         }
     });
 })();

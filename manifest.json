@@ -42,8 +42,13 @@
         },
         {
             "matches": [
-                "https://not-522.appspot.com/contest/*"
-                //,"https://rsk0315.github.io/AtCoderScores/*"
+                "http://*.atcoder.jp/*",
+                "https://not-522.appspot.com/*",
+                "http://*.hatenablog.jp/*"
+            ],
+            "exclude_matches": [
+                "https://rsk0315.github.io/AtCoderScores/*",
+                "http://kenkoooo.com/atcoder/*"
             ],
             "js": [
                 "atcoder/link.js"
